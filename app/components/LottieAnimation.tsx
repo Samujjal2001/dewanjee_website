@@ -50,10 +50,10 @@ export default function LottieAnimation({
         src={src}
         className={className}
         style={{ height: `${size}px`, width: `${size}px`, display: isReady ? 'block' : 'none' }}
-        onEvent={(event: any) => {
-          if (event === 'load') setIsReady(true);
+        onEvent={(event: unknown) => {
+          if (typeof event === 'string' && event === 'load') setIsReady(true);
+          if (typeof event === 'string' && event === 'error') setHasError(true);
         }}
-        onError={() => setHasError(true)}
       />
     </>
   );

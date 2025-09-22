@@ -1,9 +1,10 @@
 import Image from "next/image";
 import LottieAnimation from "./components/LottieAnimation";
+import BlurFade from "./components/BlurFade";
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-background text-foreground p-8">
+    <BlurFade className="min-h-screen flex flex-col items-center justify-center bg-background text-foreground p-8" inView={false} direction="up" offset={8}>
       {/* Logo Section */}
       <div className="mb-12">
         <Image
@@ -42,6 +43,6 @@ export default function Home() {
           Our Website is under construction. Stay tuned.
         </p>
       </div>
-    </div>
+    </BlurFade>
   );
 }
