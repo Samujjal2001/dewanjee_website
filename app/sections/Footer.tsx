@@ -25,7 +25,7 @@ export default function Footer() {
             <p className="mt-3 text-sm text-neutral-100/80">
               From soaring event trusses and industrial sheds to bespoke kitchens,
               interiors, and furniture, we bring bold steel craftsmanship to every
-              project since 1968. Crafted in-house, delivered with pride.
+              project since 1984. Crafted in-house, delivered with pride.
             </p>
           </div>
           <div className="flex items-center gap-4 text-neutral-100">
