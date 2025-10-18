@@ -1,20 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import SmoothScroll from "./components/SmoothScroll";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "Dewanjee Steel - Coming Soon",
-  description: "Dewanjee Steel website is under construction. Premium steel data unmatched quality since 1968.",
+  title: "Dewanjee Steel | Fabrication & Steel Works",
+  description:
+    "Dewanjee delivers premium fabrication, truss manufacturing, roofing, and interior steel solutions across West Bengal.",
 };
 
 export default function RootLayout({
@@ -24,10 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${inter.variable} antialiased bg-background text-foreground`}>
+        <div className="flex min-h-screen flex-col bg-background text-foreground">
+          <SmoothScroll />
+          {children}
+        </div>
       </body>
     </html>
   );
