@@ -109,7 +109,7 @@ export default function HeroCarousel() {
       const next = prev - 1;
       return next < 0 ? 0 : next;
     });
-  }, [slideCount]);
+  }, []);
 
   useEffect(() => {
     if (timerRef.current) {

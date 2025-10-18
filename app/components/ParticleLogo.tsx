@@ -107,7 +107,8 @@ export default function ParticleLogo({ className }: ParticleLogoProps) {
       return logoHeight / (logoImage.height || 1);
     }
 
-    function createParticle(scale: number) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    function createParticle(_scale: number) {
       if (!ctx || !canvas || !textImageData || !logoImage) return null;
 
       const data = textImageData.data;
@@ -118,8 +119,6 @@ export default function ParticleLogo({ className }: ParticleLogoProps) {
 
         if (data[(y * canvas.width + x) * 4 + 3] > 128) {
           const logoHeight = Math.floor(((canvas.height / dpr) * 0.8) * dpr);
-          const aspectRatio = (logoImage.width || 1) / (logoImage.height || 1);
-          const logoWidth = logoHeight * aspectRatio;
           const centerY = (canvas.height - logoHeight) / 2;
 
           const isDSLogo = y < centerY + logoHeight * 0.4;

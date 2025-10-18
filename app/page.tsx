@@ -2,6 +2,7 @@ import Header from "./sections/Header";
 import HeroCarousel from "./sections/HeroCarousel";
 import BrandsCarousel from "./sections/BrandsCarousel";
 import ServicesSection from "./sections/ServicesSection";
+import OurBrands from "./sections/OurBrands";
 import HeroVideo from "./sections/HeroVideo";
 import Footer from "./sections/Footer";
 
@@ -12,6 +13,7 @@ export default function Home() {
       <HeroCarousel />
       <BrandsCarousel />
       <HeroVideo />
+      <OurBrands />
       <ServicesSection />
       <Footer />
     </main>

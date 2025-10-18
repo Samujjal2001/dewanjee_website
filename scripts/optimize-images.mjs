@@ -10,6 +10,8 @@ const TARGETS = [
   { dir: path.join(publicDir, "carousel"), maxWidth: 1920, quality: 78 },
   { dir: path.join(publicDir, "services"), maxWidth: 960, quality: 78 },
   { dir: path.join(publicDir, "gallery"), maxWidth: 1600, quality: 76 },
+  // Optimize custom brand logos used in the Our Brands section
+  { dir: path.join(publicDir, "our_brands"), maxWidth: 600, quality: 78 },
 ];
 
 /**
